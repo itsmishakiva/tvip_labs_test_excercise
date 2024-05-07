@@ -19,6 +19,9 @@ class AuthorizationBloc extends Bloc<AuthorizationEvent, AuthorizationState> {
       }
     });
     on<AuthorizationEventLoad>((event, emit) async {
+      //Костыль, для того чтобы показать сплэш при быстрой работе
+      //shared prefs
+      await Future.delayed(const Duration(milliseconds: 500));
       if (await _useCase.checkAuthed()) {
         emit(const AuthorizationState.success());
       } else {
