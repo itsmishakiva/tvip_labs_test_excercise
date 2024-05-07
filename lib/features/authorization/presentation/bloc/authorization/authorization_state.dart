@@ -9,4 +9,6 @@ sealed class AuthorizationState with _$AuthorizationState {
   const factory AuthorizationState.auth() = AuthorizationStateAuth;
 
   const factory AuthorizationState.signUp() = AuthorizationStateSignup;
+
+  const factory AuthorizationState.success() = AuthorizationStateSuccess;
 }

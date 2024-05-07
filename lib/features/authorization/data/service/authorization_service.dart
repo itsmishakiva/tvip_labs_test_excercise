@@ -5,4 +5,8 @@ abstract interface class AuthorizationService {
   Future<void> auth(AuthCredentials credentials);
 
   Future<void> signUp(SignUpCredentials credentials);
+
+  Future<bool> checkAuthed();
+
+  Future<void> logOut();
 }

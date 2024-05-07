@@ -37,4 +37,14 @@ class AuthorizationUseCaseImpl implements AuthorizationUseCase {
       rethrow;
     }
   }
+
+  @override
+  Future<bool> checkAuthed() async {
+    return await _repository.checkAuthed();
+  }
+
+  @override
+  Future<void> logOut() async {
+    await _repository.logOut();
+  }
 }

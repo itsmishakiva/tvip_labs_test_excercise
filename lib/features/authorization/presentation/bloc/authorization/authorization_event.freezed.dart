@@ -20,18 +20,21 @@ mixin _$AuthorizationEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(bool auth) switchSigning,
     required TResult Function() load,
+    required TResult Function() logOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool auth)? switchSigning,
     TResult? Function()? load,
+    TResult? Function()? logOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool auth)? switchSigning,
     TResult Function()? load,
+    TResult Function()? logOut,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -40,18 +43,21 @@ mixin _$AuthorizationEvent {
     required TResult Function(AuthorizationEventSwitchSigning value)
         switchSigning,
     required TResult Function(AuthorizationEventLoad value) load,
+    required TResult Function(AuthorizationEventLogOut value) logOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AuthorizationEventSwitchSigning value)? switchSigning,
     TResult? Function(AuthorizationEventLoad value)? load,
+    TResult? Function(AuthorizationEventLogOut value)? logOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AuthorizationEventSwitchSigning value)? switchSigning,
     TResult Function(AuthorizationEventLoad value)? load,
+    TResult Function(AuthorizationEventLogOut value)? logOut,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -147,6 +153,7 @@ class _$AuthorizationEventSwitchSigningImpl
   TResult when<TResult extends Object?>({
     required TResult Function(bool auth) switchSigning,
     required TResult Function() load,
+    required TResult Function() logOut,
   }) {
     return switchSigning(auth);
   }
@@ -156,6 +163,7 @@ class _$AuthorizationEventSwitchSigningImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool auth)? switchSigning,
     TResult? Function()? load,
+    TResult? Function()? logOut,
   }) {
     return switchSigning?.call(auth);
   }
@@ -165,6 +173,7 @@ class _$AuthorizationEventSwitchSigningImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool auth)? switchSigning,
     TResult Function()? load,
+    TResult Function()? logOut,
     required TResult orElse(),
   }) {
     if (switchSigning != null) {
@@ -179,6 +188,7 @@ class _$AuthorizationEventSwitchSigningImpl
     required TResult Function(AuthorizationEventSwitchSigning value)
         switchSigning,
     required TResult Function(AuthorizationEventLoad value) load,
+    required TResult Function(AuthorizationEventLogOut value) logOut,
   }) {
     return switchSigning(this);
   }
@@ -188,6 +198,7 @@ class _$AuthorizationEventSwitchSigningImpl
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AuthorizationEventSwitchSigning value)? switchSigning,
     TResult? Function(AuthorizationEventLoad value)? load,
+    TResult? Function(AuthorizationEventLogOut value)? logOut,
   }) {
     return switchSigning?.call(this);
   }
@@ -197,6 +208,7 @@ class _$AuthorizationEventSwitchSigningImpl
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AuthorizationEventSwitchSigning value)? switchSigning,
     TResult Function(AuthorizationEventLoad value)? load,
+    TResult Function(AuthorizationEventLogOut value)? logOut,
     required TResult orElse(),
   }) {
     if (switchSigning != null) {
@@ -260,6 +272,7 @@ class _$AuthorizationEventLoadImpl implements AuthorizationEventLoad {
   TResult when<TResult extends Object?>({
     required TResult Function(bool auth) switchSigning,
     required TResult Function() load,
+    required TResult Function() logOut,
   }) {
     return load();
   }
@@ -269,6 +282,7 @@ class _$AuthorizationEventLoadImpl implements AuthorizationEventLoad {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool auth)? switchSigning,
     TResult? Function()? load,
+    TResult? Function()? logOut,
   }) {
     return load?.call();
   }
@@ -278,6 +292,7 @@ class _$AuthorizationEventLoadImpl implements AuthorizationEventLoad {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool auth)? switchSigning,
     TResult Function()? load,
+    TResult Function()? logOut,
     required TResult orElse(),
   }) {
     if (load != null) {
@@ -292,6 +307,7 @@ class _$AuthorizationEventLoadImpl implements AuthorizationEventLoad {
     required TResult Function(AuthorizationEventSwitchSigning value)
         switchSigning,
     required TResult Function(AuthorizationEventLoad value) load,
+    required TResult Function(AuthorizationEventLogOut value) logOut,
   }) {
     return load(this);
   }
@@ -301,6 +317,7 @@ class _$AuthorizationEventLoadImpl implements AuthorizationEventLoad {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AuthorizationEventSwitchSigning value)? switchSigning,
     TResult? Function(AuthorizationEventLoad value)? load,
+    TResult? Function(AuthorizationEventLogOut value)? logOut,
   }) {
     return load?.call(this);
   }
@@ -310,6 +327,7 @@ class _$AuthorizationEventLoadImpl implements AuthorizationEventLoad {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AuthorizationEventSwitchSigning value)? switchSigning,
     TResult Function(AuthorizationEventLoad value)? load,
+    TResult Function(AuthorizationEventLogOut value)? logOut,
     required TResult orElse(),
   }) {
     if (load != null) {
@@ -321,4 +339,117 @@ class _$AuthorizationEventLoadImpl implements AuthorizationEventLoad {
 
 abstract class AuthorizationEventLoad implements AuthorizationEvent {
   const factory AuthorizationEventLoad() = _$AuthorizationEventLoadImpl;
+}
+
+/// @nodoc
+abstract class _$$AuthorizationEventLogOutImplCopyWith<$Res> {
+  factory _$$AuthorizationEventLogOutImplCopyWith(
+          _$AuthorizationEventLogOutImpl value,
+          $Res Function(_$AuthorizationEventLogOutImpl) then) =
+      __$$AuthorizationEventLogOutImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AuthorizationEventLogOutImplCopyWithImpl<$Res>
+    extends _$AuthorizationEventCopyWithImpl<$Res,
+        _$AuthorizationEventLogOutImpl>
+    implements _$$AuthorizationEventLogOutImplCopyWith<$Res> {
+  __$$AuthorizationEventLogOutImplCopyWithImpl(
+      _$AuthorizationEventLogOutImpl _value,
+      $Res Function(_$AuthorizationEventLogOutImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AuthorizationEventLogOutImpl implements AuthorizationEventLogOut {
+  const _$AuthorizationEventLogOutImpl();
+
+  @override
+  String toString() {
+    return 'AuthorizationEvent.logOut()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AuthorizationEventLogOutImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool auth) switchSigning,
+    required TResult Function() load,
+    required TResult Function() logOut,
+  }) {
+    return logOut();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool auth)? switchSigning,
+    TResult? Function()? load,
+    TResult? Function()? logOut,
+  }) {
+    return logOut?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool auth)? switchSigning,
+    TResult Function()? load,
+    TResult Function()? logOut,
+    required TResult orElse(),
+  }) {
+    if (logOut != null) {
+      return logOut();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AuthorizationEventSwitchSigning value)
+        switchSigning,
+    required TResult Function(AuthorizationEventLoad value) load,
+    required TResult Function(AuthorizationEventLogOut value) logOut,
+  }) {
+    return logOut(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AuthorizationEventSwitchSigning value)? switchSigning,
+    TResult? Function(AuthorizationEventLoad value)? load,
+    TResult? Function(AuthorizationEventLogOut value)? logOut,
+  }) {
+    return logOut?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AuthorizationEventSwitchSigning value)? switchSigning,
+    TResult Function(AuthorizationEventLoad value)? load,
+    TResult Function(AuthorizationEventLogOut value)? logOut,
+    required TResult orElse(),
+  }) {
+    if (logOut != null) {
+      return logOut(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AuthorizationEventLogOut implements AuthorizationEvent {
+  const factory AuthorizationEventLogOut() = _$AuthorizationEventLogOutImpl;
 }

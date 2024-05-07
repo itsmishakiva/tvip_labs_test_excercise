@@ -7,6 +7,8 @@ import 'package:tvip_labs_test_excercise/features/authorization/data/service/aut
 import 'package:tvip_labs_test_excercise/features/authorization/domain/use_case/authorization_use_case_impl.dart';
 import 'package:tvip_labs_test_excercise/features/authorization/presentation/bloc/auth/auth_bloc.dart';
 import 'package:tvip_labs_test_excercise/features/authorization/presentation/bloc/auth/auth_state.dart';
+import 'package:tvip_labs_test_excercise/features/authorization/presentation/bloc/authorization/authorization_bloc.dart';
+import 'package:tvip_labs_test_excercise/features/authorization/presentation/bloc/authorization/authorization_event.dart';
 import 'package:tvip_labs_test_excercise/features/authorization/presentation/screens/auth_screen.dart';
 
 @RoutePage()
@@ -30,7 +32,9 @@ class AuthProvider extends StatelessWidget {
       child: BlocListener<AuthBloc, AuthState>(
         listener: (context, state) {
           if (state is AuthStateSuccess) {
-            context.router.replaceNamed('/home');
+            context.read<AuthorizationBloc>().add(
+                  const AuthorizationEvent.load(),
+                );
           }
         },
         child: const AuthScreen(),

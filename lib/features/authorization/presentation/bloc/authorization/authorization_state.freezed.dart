@@ -21,6 +21,7 @@ mixin _$AuthorizationState {
     required TResult Function() loading,
     required TResult Function() auth,
     required TResult Function() signUp,
+    required TResult Function() success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$AuthorizationState {
     TResult? Function()? loading,
     TResult? Function()? auth,
     TResult? Function()? signUp,
+    TResult? Function()? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$AuthorizationState {
     TResult Function()? loading,
     TResult Function()? auth,
     TResult Function()? signUp,
+    TResult Function()? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,7 @@ mixin _$AuthorizationState {
     required TResult Function(AuthorizationStateLoading value) loading,
     required TResult Function(AuthorizationStateAuth value) auth,
     required TResult Function(AuthorizationStateSignup value) signUp,
+    required TResult Function(AuthorizationStateSuccess value) success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,7 @@ mixin _$AuthorizationState {
     TResult? Function(AuthorizationStateLoading value)? loading,
     TResult? Function(AuthorizationStateAuth value)? auth,
     TResult? Function(AuthorizationStateSignup value)? signUp,
+    TResult? Function(AuthorizationStateSuccess value)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +62,7 @@ mixin _$AuthorizationState {
     TResult Function(AuthorizationStateLoading value)? loading,
     TResult Function(AuthorizationStateAuth value)? auth,
     TResult Function(AuthorizationStateSignup value)? signUp,
+    TResult Function(AuthorizationStateSuccess value)? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -125,6 +131,7 @@ class _$AuthorizationStateLoadingImpl implements AuthorizationStateLoading {
     required TResult Function() loading,
     required TResult Function() auth,
     required TResult Function() signUp,
+    required TResult Function() success,
   }) {
     return loading();
   }
@@ -135,6 +142,7 @@ class _$AuthorizationStateLoadingImpl implements AuthorizationStateLoading {
     TResult? Function()? loading,
     TResult? Function()? auth,
     TResult? Function()? signUp,
+    TResult? Function()? success,
   }) {
     return loading?.call();
   }
@@ -145,6 +153,7 @@ class _$AuthorizationStateLoadingImpl implements AuthorizationStateLoading {
     TResult Function()? loading,
     TResult Function()? auth,
     TResult Function()? signUp,
+    TResult Function()? success,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -159,6 +168,7 @@ class _$AuthorizationStateLoadingImpl implements AuthorizationStateLoading {
     required TResult Function(AuthorizationStateLoading value) loading,
     required TResult Function(AuthorizationStateAuth value) auth,
     required TResult Function(AuthorizationStateSignup value) signUp,
+    required TResult Function(AuthorizationStateSuccess value) success,
   }) {
     return loading(this);
   }
@@ -169,6 +179,7 @@ class _$AuthorizationStateLoadingImpl implements AuthorizationStateLoading {
     TResult? Function(AuthorizationStateLoading value)? loading,
     TResult? Function(AuthorizationStateAuth value)? auth,
     TResult? Function(AuthorizationStateSignup value)? signUp,
+    TResult? Function(AuthorizationStateSuccess value)? success,
   }) {
     return loading?.call(this);
   }
@@ -179,6 +190,7 @@ class _$AuthorizationStateLoadingImpl implements AuthorizationStateLoading {
     TResult Function(AuthorizationStateLoading value)? loading,
     TResult Function(AuthorizationStateAuth value)? auth,
     TResult Function(AuthorizationStateSignup value)? signUp,
+    TResult Function(AuthorizationStateSuccess value)? success,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -236,6 +248,7 @@ class _$AuthorizationStateAuthImpl implements AuthorizationStateAuth {
     required TResult Function() loading,
     required TResult Function() auth,
     required TResult Function() signUp,
+    required TResult Function() success,
   }) {
     return auth();
   }
@@ -246,6 +259,7 @@ class _$AuthorizationStateAuthImpl implements AuthorizationStateAuth {
     TResult? Function()? loading,
     TResult? Function()? auth,
     TResult? Function()? signUp,
+    TResult? Function()? success,
   }) {
     return auth?.call();
   }
@@ -256,6 +270,7 @@ class _$AuthorizationStateAuthImpl implements AuthorizationStateAuth {
     TResult Function()? loading,
     TResult Function()? auth,
     TResult Function()? signUp,
+    TResult Function()? success,
     required TResult orElse(),
   }) {
     if (auth != null) {
@@ -270,6 +285,7 @@ class _$AuthorizationStateAuthImpl implements AuthorizationStateAuth {
     required TResult Function(AuthorizationStateLoading value) loading,
     required TResult Function(AuthorizationStateAuth value) auth,
     required TResult Function(AuthorizationStateSignup value) signUp,
+    required TResult Function(AuthorizationStateSuccess value) success,
   }) {
     return auth(this);
   }
@@ -280,6 +296,7 @@ class _$AuthorizationStateAuthImpl implements AuthorizationStateAuth {
     TResult? Function(AuthorizationStateLoading value)? loading,
     TResult? Function(AuthorizationStateAuth value)? auth,
     TResult? Function(AuthorizationStateSignup value)? signUp,
+    TResult? Function(AuthorizationStateSuccess value)? success,
   }) {
     return auth?.call(this);
   }
@@ -290,6 +307,7 @@ class _$AuthorizationStateAuthImpl implements AuthorizationStateAuth {
     TResult Function(AuthorizationStateLoading value)? loading,
     TResult Function(AuthorizationStateAuth value)? auth,
     TResult Function(AuthorizationStateSignup value)? signUp,
+    TResult Function(AuthorizationStateSuccess value)? success,
     required TResult orElse(),
   }) {
     if (auth != null) {
@@ -348,6 +366,7 @@ class _$AuthorizationStateSignupImpl implements AuthorizationStateSignup {
     required TResult Function() loading,
     required TResult Function() auth,
     required TResult Function() signUp,
+    required TResult Function() success,
   }) {
     return signUp();
   }
@@ -358,6 +377,7 @@ class _$AuthorizationStateSignupImpl implements AuthorizationStateSignup {
     TResult? Function()? loading,
     TResult? Function()? auth,
     TResult? Function()? signUp,
+    TResult? Function()? success,
   }) {
     return signUp?.call();
   }
@@ -368,6 +388,7 @@ class _$AuthorizationStateSignupImpl implements AuthorizationStateSignup {
     TResult Function()? loading,
     TResult Function()? auth,
     TResult Function()? signUp,
+    TResult Function()? success,
     required TResult orElse(),
   }) {
     if (signUp != null) {
@@ -382,6 +403,7 @@ class _$AuthorizationStateSignupImpl implements AuthorizationStateSignup {
     required TResult Function(AuthorizationStateLoading value) loading,
     required TResult Function(AuthorizationStateAuth value) auth,
     required TResult Function(AuthorizationStateSignup value) signUp,
+    required TResult Function(AuthorizationStateSuccess value) success,
   }) {
     return signUp(this);
   }
@@ -392,6 +414,7 @@ class _$AuthorizationStateSignupImpl implements AuthorizationStateSignup {
     TResult? Function(AuthorizationStateLoading value)? loading,
     TResult? Function(AuthorizationStateAuth value)? auth,
     TResult? Function(AuthorizationStateSignup value)? signUp,
+    TResult? Function(AuthorizationStateSuccess value)? success,
   }) {
     return signUp?.call(this);
   }
@@ -402,6 +425,7 @@ class _$AuthorizationStateSignupImpl implements AuthorizationStateSignup {
     TResult Function(AuthorizationStateLoading value)? loading,
     TResult Function(AuthorizationStateAuth value)? auth,
     TResult Function(AuthorizationStateSignup value)? signUp,
+    TResult Function(AuthorizationStateSuccess value)? success,
     required TResult orElse(),
   }) {
     if (signUp != null) {
@@ -413,4 +437,122 @@ class _$AuthorizationStateSignupImpl implements AuthorizationStateSignup {
 
 abstract class AuthorizationStateSignup implements AuthorizationState {
   const factory AuthorizationStateSignup() = _$AuthorizationStateSignupImpl;
+}
+
+/// @nodoc
+abstract class _$$AuthorizationStateSuccessImplCopyWith<$Res> {
+  factory _$$AuthorizationStateSuccessImplCopyWith(
+          _$AuthorizationStateSuccessImpl value,
+          $Res Function(_$AuthorizationStateSuccessImpl) then) =
+      __$$AuthorizationStateSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AuthorizationStateSuccessImplCopyWithImpl<$Res>
+    extends _$AuthorizationStateCopyWithImpl<$Res,
+        _$AuthorizationStateSuccessImpl>
+    implements _$$AuthorizationStateSuccessImplCopyWith<$Res> {
+  __$$AuthorizationStateSuccessImplCopyWithImpl(
+      _$AuthorizationStateSuccessImpl _value,
+      $Res Function(_$AuthorizationStateSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AuthorizationStateSuccessImpl implements AuthorizationStateSuccess {
+  const _$AuthorizationStateSuccessImpl();
+
+  @override
+  String toString() {
+    return 'AuthorizationState.success()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AuthorizationStateSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function() auth,
+    required TResult Function() signUp,
+    required TResult Function() success,
+  }) {
+    return success();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? loading,
+    TResult? Function()? auth,
+    TResult? Function()? signUp,
+    TResult? Function()? success,
+  }) {
+    return success?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function()? auth,
+    TResult Function()? signUp,
+    TResult Function()? success,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AuthorizationStateLoading value) loading,
+    required TResult Function(AuthorizationStateAuth value) auth,
+    required TResult Function(AuthorizationStateSignup value) signUp,
+    required TResult Function(AuthorizationStateSuccess value) success,
+  }) {
+    return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AuthorizationStateLoading value)? loading,
+    TResult? Function(AuthorizationStateAuth value)? auth,
+    TResult? Function(AuthorizationStateSignup value)? signUp,
+    TResult? Function(AuthorizationStateSuccess value)? success,
+  }) {
+    return success?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AuthorizationStateLoading value)? loading,
+    TResult Function(AuthorizationStateAuth value)? auth,
+    TResult Function(AuthorizationStateSignup value)? signUp,
+    TResult Function(AuthorizationStateSuccess value)? success,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AuthorizationStateSuccess implements AuthorizationState {
+  const factory AuthorizationStateSuccess() = _$AuthorizationStateSuccessImpl;
 }

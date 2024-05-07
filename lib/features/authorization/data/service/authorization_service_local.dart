@@ -15,6 +15,7 @@ class AuthorizationServiceLocal implements AuthorizationService {
     var bytes = utf8.encode(credentials.password);
     var hashed = sha256.convert(bytes);
     if (hashed.toString() != result) throw WrongCredentialsException();
+    preferences.setBool('session', true);
   }
 
   @override
@@ -25,5 +26,18 @@ class AuthorizationServiceLocal implements AuthorizationService {
     var bytes = utf8.encode(credentials.password);
     var hashed = sha256.convert(bytes);
     preferences.setString(credentials.username, hashed.toString());
+    preferences.setBool('session', true);
+  }
+
+  @override
+  Future<void> logOut() async {
+    var preferences = await SharedPreferences.getInstance();
+    preferences.setBool('session', false);
+  }
+
+  @override
+  Future<bool> checkAuthed() async {
+    var preferences = await SharedPreferences.getInstance();
+    return preferences.getBool('session') ?? false;
   }
 }

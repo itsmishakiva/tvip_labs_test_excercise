@@ -8,4 +8,6 @@ sealed class AuthorizationEvent with _$AuthorizationEvent {
       AuthorizationEventSwitchSigning;
 
   const factory AuthorizationEvent.load() = AuthorizationEventLoad;
+
+  const factory AuthorizationEvent.logOut() = AuthorizationEventLogOut;
 }

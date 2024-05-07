@@ -19,4 +19,14 @@ class AuthorizationRepositoryImpl implements AuthorizationRepository {
   Future<void> signUp(SignUpCredentials credentials) async {
     await _service.signUp(credentials);
   }
+
+  @override
+  Future<bool> checkAuthed() async {
+    return await _service.checkAuthed();
+  }
+
+  @override
+  Future<void> logOut() async {
+    await _service.logOut();
+  }
 }

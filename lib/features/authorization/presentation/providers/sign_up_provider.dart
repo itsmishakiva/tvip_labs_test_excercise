@@ -5,6 +5,8 @@ import 'package:tvip_labs_test_excercise/extensions/build_context_extension.dart
 import 'package:tvip_labs_test_excercise/features/authorization/data/repository/auth_repository_impl.dart';
 import 'package:tvip_labs_test_excercise/features/authorization/data/service/authorization_service_local.dart';
 import 'package:tvip_labs_test_excercise/features/authorization/domain/use_case/authorization_use_case_impl.dart';
+import 'package:tvip_labs_test_excercise/features/authorization/presentation/bloc/authorization/authorization_bloc.dart';
+import 'package:tvip_labs_test_excercise/features/authorization/presentation/bloc/authorization/authorization_event.dart';
 import 'package:tvip_labs_test_excercise/features/authorization/presentation/bloc/signup/sign_up_bloc.dart';
 import 'package:tvip_labs_test_excercise/features/authorization/presentation/bloc/signup/sign_up_state.dart';
 import 'package:tvip_labs_test_excercise/features/authorization/presentation/screens/sign_up_screen.dart';
@@ -30,7 +32,9 @@ class SignUpProvider extends StatelessWidget {
       child: BlocListener<SignUpBloc, SignUpState>(
         listener: (context, state) {
           if (state is SignUpStateSuccess) {
-            context.router.replaceNamed('/home');
+            context.read<AuthorizationBloc>().add(
+                  const AuthorizationEvent.load(),
+                );
           }
         },
         child: const SignUpScreen(),
