@@ -8,8 +8,8 @@ class AuthCredentials with _$AuthCredentials {
   const factory AuthCredentials({
     required String username,
     required String password,
-  }) =_AuthCredentials;
+  }) = _AuthCredentials;
 
-  factory AuthCredentials.fromJson(Map<String, Object?> json)
-  => _$AuthCredentialsFromJson(json);
+  factory AuthCredentials.fromJson(Map<String, Object?> json) =>
+      _$AuthCredentialsFromJson(json);
 }

@@ -9,8 +9,8 @@ class SignUpCredentials with _$SignUpCredentials {
     required String username,
     required String password,
     required String passwordRepeat,
-  }) =_SignUpCredentials;
+  }) = _SignUpCredentials;
 
-  factory SignUpCredentials.fromJson(Map<String, Object?> json)
-  => _$SignUpCredentialsFromJson(json);
+  factory SignUpCredentials.fromJson(Map<String, Object?> json) =>
+      _$SignUpCredentialsFromJson(json);
 }

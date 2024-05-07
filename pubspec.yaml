@@ -21,6 +21,8 @@ dependencies:
     sdk: flutter
   intl: any
   provider: ^6.1.2
+  shared_preferences: ^2.2.3
+  crypto: ^3.0.3
 
 dev_dependencies:
   flutter_test:

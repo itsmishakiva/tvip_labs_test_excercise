@@ -6,10 +6,8 @@ import 'package:tvip_labs_test_excercise/themes/app_text_styles.dart';
 class AppThemes {
   final _appLightColors = AppLightColors();
   final _appDarkColors = AppDarkColors();
-  late final _appLightTextStyles =
-      AppTextStylesImpl(colors: _appLightColors);
-  late final _appDarkTextStyles =
-      AppTextStylesImpl(colors: _appDarkColors);
+  late final _appLightTextStyles = AppTextStylesImpl(colors: _appLightColors);
+  late final _appDarkTextStyles = AppTextStylesImpl(colors: _appDarkColors);
 
   //Метод для получения светлой темы
   ThemeData lightThemeData() {

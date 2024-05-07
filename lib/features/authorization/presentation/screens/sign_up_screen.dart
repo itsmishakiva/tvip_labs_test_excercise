@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tvip_labs_test_excercise/common/widgets/app_button.dart';
@@ -36,8 +35,8 @@ class SignUpScreen extends StatelessWidget {
                   labelText: context.locale!.username,
                   onChanged: (value) {
                     context.read<SignUpBloc>().add(
-                      SignUpEvent.updateUsername(username: value ?? ''),
-                    );
+                          SignUpEvent.updateUsername(username: value ?? ''),
+                        );
                   },
                 ),
                 const SizedBox(height: 24.0),
@@ -46,8 +45,8 @@ class SignUpScreen extends StatelessWidget {
                   obscureText: true,
                   onChanged: (value) {
                     context.read<SignUpBloc>().add(
-                      SignUpEvent.updatePassword(password: value ?? ''),
-                    );
+                          SignUpEvent.updatePassword(password: value ?? ''),
+                        );
                   },
                 ),
                 const SizedBox(height: 24.0),
@@ -56,8 +55,9 @@ class SignUpScreen extends StatelessWidget {
                   obscureText: true,
                   onChanged: (value) {
                     context.read<SignUpBloc>().add(
-                      SignUpEvent.updatePasswordRepeat(passwordRepeat: value ?? ''),
-                    );
+                          SignUpEvent.updatePasswordRepeat(
+                              passwordRepeat: value ?? ''),
+                        );
                   },
                 ),
                 SizedBox(
@@ -85,8 +85,8 @@ class SignUpScreen extends StatelessWidget {
                 GestureDetector(
                   onTap: () {
                     context.read<AuthorizationBloc>().add(
-                      const AuthorizationEvent.switchSigning(true),
-                    );
+                          const AuthorizationEvent.switchSigning(true),
+                        );
                   },
                   child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 12.0),
